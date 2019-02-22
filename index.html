@@ -14,6 +14,7 @@
 			<header class="header">
 				<h1>todos</h1>
 				<input class="new-todo"
+				v-focus
 				@keydown.enter="handleNewTodoKeyDown" 
 				placeholder="What needs to be done?" 
 				autofocus>
@@ -58,7 +59,8 @@
 							:value="item.title"
 							@keydown.enter="handleSaveEditKeydown(item, index, $event)"
 							@blur="handleSaveEditKeydown(item, index, $event)"
-							@keydown.esc="handleCancelEsc">
+							@keydown.esc="handleCancelEsc"
+							v-todo-focus="currentEditing === item">
 						</li>
 					</ul>
 				</section>

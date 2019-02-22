@@ -1,4 +1,20 @@
 ;(function(){
+	//自定义全局指令
+	// 我们需要让我们的 input 一上来就聚焦一次，以后不需要了 官方推荐
+	Vue.directive('focus', {
+		inserted: function (el) {
+		  // 聚焦元素  聚焦不能写在bind钩子中
+		  el.focus()
+		}
+	})
+	//自定义双击点击指令
+	Vue.directive('todo-focus', {
+		update (el, binding) {
+			if(binding.value){
+				el.focus()
+			}
+		}
+	})
 	window.app = new Vue({
 		data: {
 			todos: JSON.parse(window.localStorage.getItem('todos')||'[]'),//localstorage从本地存储拿到数据
