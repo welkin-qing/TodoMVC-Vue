@@ -1,25 +1,40 @@
 ;(function(){
-	const todos = [
-		{
-			id: 1,
-			title: '敲代码',
-			completed: true
-		},
-		{
-			id: 2,
-			title: '吃饭',
-			completed: false
-		},
-		{
-			id: 3,
-			title: '睡觉觉',
-			completed: true
-		}
-	]
-	new Vue({
+	window.app = new Vue({
 		data: {
-			todos,
+			todos: JSON.parse(window.localStorage.getItem('todos')||'[]'),//localstorage从本地存储拿到数据
 			currentEditing: null
+		},
+		watch: {
+			todos: {//监视todos的改变，当todos发生改变时，做业务处理
+				handler(val, oldval){
+					console.log(val[0],oldval[0])
+					window.localStorage.setItem('todos', JSON.stringify(this.todos))
+				},
+				deep: true//深度监视
+				//immediate:true  //无论变化与否，上来就开始调用一次
+			}
+		},
+		computed: {//计算属性
+			remaningCount: {
+				get(){
+					return this.todos.filter(t => !t.completed).length
+				},
+				//当实例.remaningCount=xxx的时候会自动调用set方法
+				set(){
+					console.log('1111')
+				}
+			},
+			tlggleAllstatus: {
+				get(){
+					return this.todos.every(t=>t.completed)
+				},
+				set() {
+					const checked = !this.tlggleAllstatus
+					this.todos.forEach(item => {
+						item.completed = checked
+					})
+				}
+			}
 		},
 		methods: {
 			handleNewTodoKeyDown(e) {
