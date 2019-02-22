@@ -24,3 +24,8 @@ cnpm install --production 可以只装dependencies中的包
 # 数据持久化
 1. 将数据持久化到localStorage，实现本地存储
 2. 使用watch监视数据的改变，删除，增加
+
+# 路由切换状态
+1. 点击链接过滤数组的输出
+2. 刷新保持过滤状态
+3. 切换点击链接的样式

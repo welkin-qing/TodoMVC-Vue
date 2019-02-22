@@ -2,12 +2,13 @@
 	window.app = new Vue({
 		data: {
 			todos: JSON.parse(window.localStorage.getItem('todos')||'[]'),//localstorage从本地存储拿到数据
-			currentEditing: null
+			currentEditing: null,
+			filterText: 'completed'
 		},
 		watch: {
 			todos: {//监视todos的改变，当todos发生改变时，做业务处理
 				handler(val, oldval){
-					console.log(val[0],oldval[0])
+					//console.log(val[0],oldval[0])
 					window.localStorage.setItem('todos', JSON.stringify(this.todos))
 				},
 				deep: true//深度监视
@@ -33,6 +34,19 @@
 					this.todos.forEach(item => {
 						item.completed = checked
 					})
+				}
+			},
+			filterTodos (){//简写只需要get属性
+				switch(this.filterText){
+					case 'active':
+						return this.todos.filter(t => !t.completed) 
+						break
+					case 'completed':
+						return this.todos.filter(t => t.completed)
+						break
+					default:
+						return this.todos
+						break
 				}
 			}
 		},
@@ -90,4 +104,12 @@
 			}
 		},
 	}).$mount('#app')
+
+	//页面初始化就开始调用一次
+	handlehashchange()
+	//注册hansh(锚点)的改变事件
+	window.onhashchange = handlehashchange
+	function handlehashchange() {
+		app.filterText = window.location.hash.substr(2)
+	}
 })()
