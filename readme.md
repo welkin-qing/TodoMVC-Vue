@@ -18,7 +18,7 @@ An instance of ToDoMVC based on Vue
 -----
 
 # 基本配置
-### 下载mvc模板
+### 下载ToDoMVC模板
 https://github.com/tastejs/todomvc-app-template
 ### 配置browser-sync浏览器同步测试工具及配置scripts
 
