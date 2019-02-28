@@ -8,7 +8,10 @@
 
 An instance of ToDoMVC based on Vue
 
-
+![](https://github.com/welkin-qing/todomvc-vue/blob/master/img/release-1.0-darkcyan.svg)
+![](https://github.com/welkin-qing/todomvc-vue/blob/master/img/build-passing-brightgreen.svg)
+![](https://github.com/welkin-qing/todomvc-vue/blob/master/img/dependencies-up to date-brightgreen.svg)
+![](https://github.com/welkin-qing/todomvc-vue/blob/license-MIT-darkcyan.svg)
 
 </div>
 
