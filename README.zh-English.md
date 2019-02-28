@@ -1,4 +1,4 @@
-[简体中文](./README.md)  | English
+[简体中文](https://github.com/welkin-qing/todomvc-vue)  | English
 
 <div align="center">
 
