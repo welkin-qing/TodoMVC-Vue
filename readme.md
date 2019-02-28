@@ -1,6 +1,9 @@
 简体中文 | English
+
 <div align="center">
+
 ![](https://github.com/welkin-qing/todomvc-vue/blob/master/img/mylogo.png)
+
 </div>
 # 基本配置
 ## 下载mvc模板
