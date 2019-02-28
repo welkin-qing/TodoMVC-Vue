@@ -1,3 +1,7 @@
+简体中文 | English
+<div align="center">
+![[]()
+</div>
 # 基本配置
 ## 下载mvc模板
 https://github.com/tastejs/todomvc-app-template
