@@ -17,6 +17,15 @@ An instance of ToDoMVC based on Vue
 
 -----
 
+# Installation and use
+```js
+git clone git@github.com:welkin-qing/todomvc-vue.git
+cd todomvc-vue
+npm install
+npm run dev
+```
+-----
+
 # The basic configuration
 ### Download the ToDoMVC template
 https://github.com/tastejs/todomvc-app-template
@@ -57,12 +66,3 @@ cnpm install --save-dev browser-sync
 ###### Attention
 cnpm install --production  just load the packages in dependencies
 
------
-
-# Installation and use
-```js
-git clone git@github.com:welkin-qing/todomvc-vue.git
-cd todomvc-vue
-npm install
-npm run dev
-```
