@@ -4,6 +4,12 @@
 
 ![](https://github.com/welkin-qing/todomvc-vue/blob/master/img/mylogo.png)
 
+一个基于 Vue 框架开发的 ToDoMVC 实例
+
+An instance of ToDoMVC based on Vue
+
+
+
 </div>
 
 # 基本配置
