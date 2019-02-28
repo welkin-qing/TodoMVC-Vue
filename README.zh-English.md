@@ -22,7 +22,7 @@ An instance of ToDoMVC based on Vue
 git clone git@github.com:welkin-qing/todomvc-vue.git
 cd todomvc-vue
 npm install
-npm run dev
+npm run dev/ npm start
 ```
 -----
 
